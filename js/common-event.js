@@ -1,4 +1,4 @@
-// using functiion
+/* // using functiion
 function justF () {
                // document.body.style.backgroundColor = 'red';
                const clickmethod = document.getElementById('click-mathod');
@@ -18,4 +18,24 @@ document.getElementById('submit').addEventListener('click', function() {
                const input = document.getElementById('input-name');
                console.log(input.value)
                
+}) */
+
+
+// use only function 
+function justF () {
+               const clickmethod = document.getElementById('click-method');
+               clickmethod.innerText = "set by only function method";
+
+}
+
+// direct method 
+document.getElementById('direct').addEventListener('click', function() {
+               document.body.style.backgroundColor = 'red';
+});
+
+// direct another method 
+
+document.getElementById('submitBtn').addEventListener('click', function() {
+               const inputMethod = document.getElementById('input');
+               console.log(inputMethod.value );
 })
