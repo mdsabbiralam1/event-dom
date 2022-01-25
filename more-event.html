@@ -32,6 +32,15 @@
                               document.body.style.backgroundColor = "white";
                })
 
+               // keydown
+               document.getElementById('delet-confirm').addEventListener('keydown', e => {
+                              console.log(e)
+                              if (e.keyCode === 115 || keyCode === 90) {
+                                             alert("Sorry you cant use ' + e.key")
+                                             e.preventDefault();
+                              }
+               })
+
 
                
                
