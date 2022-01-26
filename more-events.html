@@ -50,8 +50,13 @@
 
                // keyup 
                document.getElementById('delet-confirm').addEventListener('keyup', function (event) {
-                              const deleField = document.getElementById('delet-confirm');
-                              console.log(event);
+                              const deletBtn = document.getElementById('delet-btn')
+                              if(event.target.value == 'delet') {
+                                             deletBtn.removeAttribute('disabled');
+                              }
+                              else{
+                                             deletBtn.setAttribute('disabled', true);
+                              }
                });
 
                // change
