@@ -23,7 +23,13 @@
 <!-- javascript -->
 <script>
                
-
+// another approach for delegate
+               const items = document.getElementsByClassName('item');
+               for(const item of items){
+                              item.addEventListener('click', function(event){
+                                             event.target.parentNode.removeChild(event.target)
+                              })
+               }
 
 
 
@@ -31,7 +37,7 @@
 
  
                /* 
-               // approach one for delegate 
+// approach one for delegate 
                const items = document.getElementsByClassName('item');
                for (const item of items){
                               item.addEventListener('click', function() {
