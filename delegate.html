@@ -7,9 +7,10 @@
                <title>Event Delegate</title>
 </head>
 <body>
+               <h1> ADvanvce tai baki roilo.</h1>
              <section>
                             <h2>Delegate event</h2>
-
+                              <button id="add-item">Add Item</button>
                             <ul id="item-container">
                                            <li class="item">Lorem, ipsum.</li>
                                            <li class="item">Repellat, eaque.</li>
@@ -22,7 +23,37 @@
 
 <!-- javascript -->
 <script>
-               
+// added items o
+               document.getElementById('add-item').addEventListener('click', function() {
+                              // create li 
+                              const li = document.createElement('li');
+                              li.innerText = 'lorem2';
+                              li.classList.add('item');
+
+                              // where to 
+                              const ul = document.getElementById('item-container');
+
+                              // Append To new Element 
+                              ul.appendChild(li)
+                              for (const item of items){
+                              item.addEventListener('click', function() {
+                                             document.getElementById('item-container').removeChild(item)
+                              })
+               }
+                              
+               })
+
+
+ 
+                
+// approach one for delegate 
+               const items = document.getElementsByClassName('item');
+               for (const item of items){
+                              item.addEventListener('click', function() {
+                                             document.getElementById('item-container').removeChild(item)
+                              })
+               } 
+/*                              
 // another approach for delegate
                const items = document.getElementsByClassName('item');
                for(const item of items){
@@ -33,27 +64,15 @@
 
 
 
-
-
- 
-               /* 
-// approach one for delegate 
+// practice part added 
                const items = document.getElementsByClassName('item');
-               for (const item of items){
-                              item.addEventListener('click', function() {
-                                             document.getElementById('item-container').removeChild(item)
-                              })
-               } 
-
-                             // practice part added 
-                             const items = document.getElementsByClassName('item');
                for (const item of items) {
                              item.addEventListener('click', function() {
                                             document.getElementById('item-container').removeChild(item);
                              })
                } 
 
-               // practice two
+// practice two
 
                const items = document.getElementsByClassName('item');
                for (const item of items){
@@ -61,7 +80,7 @@
                                              document.getElementById('item-container').removeChild(item);
                               })
                } 
-               / parctise three
+// parctise three
                const items = document.getElementsByClassName('item');
                for(const item of items){
                               item.addEventListener('click', function() {
