@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+               <meta charset="UTF-8">
+               <meta http-equiv="X-UA-Compatible" content="IE=edge">
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               <title>Event Summary</title>
+</head>
+<body>
+               <h1 id='mouse-header'>More Mouse Event</h1>
+               <button onclick="bgGreen ()">Click Me: Green</button>
+               <button id="bg-white">Click Me: White</button>
+<!-- javascript -->
+<script>
+               // Event addding system one
+               function bgGreen () {
+                              document.body.style.backgroundColor = "green";
+               }
+               // Event addding system two
+               document.getElementById('bg-white').addEventListener('click', function() {
+                              document.body.style.backgroundColor = "white"
+               })
+
+               // mouse event
+               // mouseMove 
+               const mouseHeader = document.getElementById('mouse-header');
+               mouseHeader.addEventListener('mousemove', function() {
+                              console.log('mouse is moving....give me sursuri')
+               }) 
+
+               // mouseEnter 
+               mouseHeader.addEventListener('mouseenter', function() {
+                              console.log('mouse is entering...')
+               }) 
+
+               // mouseOut
+               mouseHeader.addEventListener('mouseout', function() {
+                              console.log('mouse is out...')
+               })
+</script>
+</body>
+</html>
