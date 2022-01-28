@@ -22,14 +22,22 @@
 
 <!-- javascript -->
 <script>
+               
+
+
+
+
+
+
  
-               /* // approach one for delegate 
+               /* 
+               // approach one for delegate 
                const items = document.getElementsByClassName('item');
                for (const item of items){
                               item.addEventListener('click', function() {
                                              document.getElementById('item-container').removeChild(item)
                               })
-               } */
+               } 
 
                              // practice part added 
                              const items = document.getElementsByClassName('item');
@@ -37,7 +45,26 @@
                              item.addEventListener('click', function() {
                                             document.getElementById('item-container').removeChild(item);
                              })
+               } 
+
+               // practice two
+
+               const items = document.getElementsByClassName('item');
+               for (const item of items){
+                              item.addEventListener('click', function() {
+                                             document.getElementById('item-container').removeChild(item);
+                              })
+               } 
+               / parctise three
+               const items = document.getElementsByClassName('item');
+               for(const item of items){
+                              item.addEventListener('click', function() {
+                                             document.getElementById('item-container').removeChild(item)
+                              })
                }
+               */
+
+
 
 </script>
 </body>
